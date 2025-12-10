@@ -15,7 +15,6 @@ body {
     border: 4px black solid;
     border-radius: 4px;
     flex-grow: 1;
-
 }
 
 .body-container {
@@ -49,6 +48,7 @@ h1, h2, p {
     gap: 50px;
     justify-content: space-evenly;
 }
+
 .other ul {
     width: 20vw;
     border: 4px gray solid;
@@ -60,7 +60,6 @@ h1, h2, p {
     text-align: center;
     text-decoration: none;
 }
-
 
 #description {
     min-height: 300px;
@@ -79,4 +78,17 @@ footer {
     border-color: rgb(30, 30, 30);
     border-radius: 4px;
     background-color: rgb(30, 30, 30);
+}
+
+nav,
+.other ul {
+    transition: transform 0.25s ease, background-color 0.25s ease;
+    cursor: pointer;
+}
+
+nav:hover,
+.other ul:hover {
+    transform: scale(1.05);
+    background-color: rgb(60, 60, 60);
+    border-color: rgb(60, 60, 60);
 }
