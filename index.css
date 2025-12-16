@@ -132,7 +132,6 @@ nav ul {
 }
 
 a {
-    
     padding: 10px 30px 10px 30px;
     border-radius: 20px;
     font-family: "Tiktok Sans", sans-serif;
@@ -205,15 +204,13 @@ nav a:hover,
     background-image: url("Assets/Flashcard-BG-Red.png");
 }
 
-body {
-    animation: pageFadeIn 1.2s ease forwards;
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
-@keyframes pageFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
 }
