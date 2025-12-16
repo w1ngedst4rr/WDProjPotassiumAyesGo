@@ -43,6 +43,7 @@
 
         </div>
         <script>
+
             let questionnum = 0
             let container = document.getElementById('flashcard-container');
             let qgrouplist = []
@@ -54,7 +55,7 @@
             function update() {
                 localStorage.clear;
             }
-            
+
             function CreateFlashcard() {
 
                 questionnum += 1;
@@ -169,6 +170,27 @@
 
 
             }
+
+            function LoadGroup() {
+                const flashcardlist = container.children
+                let flashcard;
+                let questionarr = JSON.parse(localStorage.getItem('qgroup'))
+                let answerarr = JSON.parse(localStorage.getItem('agroup'))
+                let paragraph;
+
+                console.log(questionarr + answerarr)
+
+                for (i = 0; i < flashcardlist.length - 1; i++) {
+                    flashcard = flashcardlist[i]
+                    paragraph = flashcard.children;
+
+                    paragraph[0].textContent = questionarr[i];
+                    paragraph[1].textContent = answerarr[i];
+
+                }
+            }
+
+
         </script>
     </body>
 </html> 
