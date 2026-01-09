@@ -50,3 +50,29 @@ Project Proposal
 
 ### Wireframe:
 https://www.canva.com/design/DAG3KtN5EP8/0yxQ9--fSg6Z3Cj9x0veTA/edit
+
+-------------------------------------------
+
+# Q3 Proposal Update
+
+## Loot & Learn
+
+## Features: (3 min)
+* Works on all devices
+* Cards transport throughout all websites
+* Has a luck-based card system
+
+## Details (project-specific)
+* For the cards, we will be creating main designs for them while using css to make them look better.
+* Each card will be assigned a number so that the cards are easy access in all webpages. 
+* For the luck based card systems, we will be using Javascript (Most likely the "Math.Random()* function) in order to ensure that the user obtains a completely random card.
+* Most cards will belong to a themed collection that would activate cool stuff using Javascript if-else checkers and HTML classes to give the users more motivation to keep playing.
+* For the flashcards, more customizability will be added to them by adding HTML buttons that change the color/theme of the flashcard being created.
+* The flashcards will also be rearranged alphabetically/numerically based on group upon loading using Objects and if-else statements.
+* The option to delete and name groups will also be made to the webpage. 
+* On the homepage, cards already obtained by the player will randomly appear and move along the page using CSS animations.
+* Flexbox and Grid will be used to make webpages compatible on all devices.
+
+
+## definition of done
+* when all 3 features have been accomplished, and maybe even more :D
