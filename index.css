@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     display: flex;
     justify-content: center;
@@ -216,59 +212,14 @@ nav a:hover,
     transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+/* ================== MOBILE + RESPONSIVE CREATE PAGE ================== */
 
-    html, body {
-        overflow-x: hidden;
-    }
-
-    body {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-container {
-        display: none;
-    }
-
-    .body-container {
-        width: 100%;
-    }
-
-    .create-container {
-        width: 100%;
-        margin-top: 20px;
-        box-sizing: border-box;
-    }
-
-    .flashcard {
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    #plus {
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    label,
-    input,
-    button {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .other {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .other ul {
-        width: 100%;
-    }
+/* Apply globally: prevent overflow */
+html, body {
+    overflow-x: hidden;
 }
 
+/* Wrap create page for side-by-side on desktop */
 .create-page {
     display: flex;
     gap: 20px;
@@ -279,6 +230,7 @@ nav a:hover,
     box-sizing: border-box;
 }
 
+/* Desktop: side-by-side */
 @media (min-width: 769px) {
     .body-container {
         width: 70vw;
@@ -289,6 +241,7 @@ nav a:hover,
     }
 }
 
+/* Mobile: stack vertically + scale elements */
 @media (max-width: 768px) {
     .create-page {
         flex-direction: column;
@@ -298,13 +251,7 @@ nav a:hover,
     .body-container,
     .create-container {
         width: 95%;
-        max-width: 480px
-    }
-
-    input, button, label {
-        width: 100% !important;
-        margin: 0 0 10px 0 !important;
-        box-sizing: border-box;
+        max-width: 480px;  /* makes inputs readable */
     }
 
     .flashcard {
@@ -315,6 +262,14 @@ nav a:hover,
     #plus {
         min-width: 100% !important;
         max-width: 100% !important;
+    }
+
+    label,
+    input,
+    button {
+        width: 100% !important;
+        margin: 0 0 10px 0 !important;
+        font-size: 16px;       /* scale text down slightly for small phones */
     }
 
     .other ul {
