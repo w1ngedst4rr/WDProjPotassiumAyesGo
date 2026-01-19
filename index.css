@@ -214,3 +214,82 @@ nav a:hover,
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .card-container {
+        display: none;
+    }
+
+    .body-container {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .flashcard {
+        min-width: 90%;
+        max-width: 90%;
+        font-size: 16px;
+    }
+
+    .flashcard p {
+        font-size: 18px;
+    }
+
+    label,
+    input,
+    button {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    input {
+        aspect-ratio: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .create-container {
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .other {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .other ul {
+        width: 100%;
+    }
+
+    nav a:hover,
+    .other ul:hover,
+    .flashcard:hover {
+        transform: none;
+    }
+}
