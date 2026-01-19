@@ -295,3 +295,55 @@ nav a:hover,
         transform: none;
     }
 }
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+        align-items: stretch;
+        overflow-x: hidden;
+    }
+
+    .body-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .create-container {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 16px;
+        padding-bottom: 32px;
+        box-sizing: border-box;
+    }
+
+    .flashcard-container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .flashcard {
+        min-width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #plus {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    label,
+    input,
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    * {
+        max-width: 100vw;
+    }
+}
