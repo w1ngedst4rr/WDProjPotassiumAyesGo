@@ -1,9 +1,18 @@
+/* ===== BASE LAYOUT ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    background-color: #0e0e0e;
 }
 
+/* ===== SIDE CARDS ===== */
 .card-container {
     display: grid;
     gap: 20px;
@@ -14,202 +23,132 @@ body {
     min-height: 148px;
     border: 4px black solid;
     border-radius: 4px;
-    flex-grow: 1;
 }
 
+/* ===== MAIN BODY ===== */
 .body-container {
     width: 70vw;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+/* ===== NAV ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    border: 4px gray solid;
+    border-radius: 20px;
+    background-color: gray;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-family: "TikTok Sans", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+}
+
+/* ===== FLASHCARDS ===== */
 .flashcard-container {
     display: flex;
     flex-wrap: wrap;
-    border: 4px solid;
-    border-color: rgb(30, 30, 30);
-    border-radius: 4px;
-    background-color: rgb(30, 30, 30);
     gap: 10px;
-
-    margin-top: 20px;
-    justify-items: space-evenly;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+    border: 4px solid rgb(30, 30, 30);
+    background-color: rgb(30, 30, 30);
+    border-radius: 4px;
+    padding: 10px;
 }
 
 .flashcard {
     border: 4px solid white;
     background-color: white;
     background-image: url("Assets/Flashcard-BG-Blue.png");
-    background-repeat: no-repeat;
-    image-rendering: pixelated;
     background-size: cover;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    align-content: center;
-
     border-radius: 4px;
-    aspect-ratio: 4/3;
+    aspect-ratio: 4 / 3;
     flex: 1 1 280px;
     max-width: 400px;
-}
-    
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .flashcard p {
-    color: white;
+    font-family: "TikTok Sans", sans-serif;
     font-weight: 900;
     text-align: center;
-    font-size: 21px;
+    color: white;
+    font-size: 18px;
+}
+
+/* ===== CREATE PANEL ===== */
+.create-container {
+    width: 30%;
+    background-color: #1b73ff;
+    border-radius: 8px;
+    padding: 16px;
 }
 
 #plus {
-    max-width: none;
-    min-width: 320px;
+    background-image: none;
+    min-width: 100%;
 }
 
+/* ===== FORMS ===== */
 label {
-    font-family: "Tiktok Sans", sans-serif;
+    font-family: "TikTok Sans", sans-serif;
     color: white;
     font-weight: 900;
-    margin: 0px 25%;
 }
 
 input {
-    font-family: "Tiktok Sans", sans-serif;
-    font-weight: 700;
-    border: white 4px solid;
-    margin: 1px 25% 20px 25%;
-    width: 50%;
-    aspect-ratio: 12/3;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
     border-radius: 8px;
+    border: 4px solid white;
 }
 
 button {
-    margin: 20px 25% 20px 25%;
-    width: 50%;
-    border: white 2px solid;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
     border-radius: 4px;
-
+    border: 2px solid white;
     background-color: #004dc9;
-    font-family: "Tiktok Sans", sans-serif;
     color: white;
     font-weight: 900;
-
-    position: relative;
-    z-index: 1000;
+    font-family: "TikTok Sans", sans-serif;
 }
 
-.create-container {
-    width: 30%;
-    padding: 8px;
-    background-color: #1b73ff;
-    border-radius: 8px;
-    padding-bottom: 20%;
-}
-
-.flashcard:hover {
-    border: 8px white solid;
-}
-
-nav {
+/* ===== CREATE PAGE LAYOUT ===== */
+.create-page {
     display: flex;
-    justify-items: center;
-    justify-content: space-evenly;
-    border: 4px gray solid;
-    border-radius: 20px;
-    background-color: gray;
-    align-self: center;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
 }
 
-nav ul {
-    display: flex;
-    text-align: center;
-    justify-content: flex-start;
-    list-style-type: none;
-}
-
-a {
-    padding: 10px 30px 10px 30px;
-    border-radius: 20px;
-    font-family: "Tiktok Sans", sans-serif;
-    font-weight: 900;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-}
-
-h1, h2, p {
-    font-family: "Tiktok Sans", sans-serif;
-    justify-self: center;
-    white-space: normal;
-    overflow-wrap: break-word;
-}
-
-.other {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    justify-content: space-evenly;
-}
-
-.other ul {
-    width: 20vw;
-    border: 4px gray solid;
-    background-color: gray;
-    border-radius: 4px;
-    list-style-type: none;
-}
-
-.other a {
-    text-align: center;
-    text-decoration: none;
-}
-
-#description {
-    min-height: 300px;
-    border: 4px solid;
-    border-color: rgb(30, 30, 30);
-    border-radius: 4px;
-    background-color: rgb(30, 30, 30);
-    color: white;
-    font-weight: 500;
-    text-align: justify;
-    padding: 8px;
-}
-
-footer {
-    border: 4px solid;
-    border-color: rgb(30, 30, 30);
-    border-radius: 4px;
-    background-color: rgb(30, 30, 30);
-}
-
-nav a,
-.other ul {
-    transition: transform 0.25s ease, background-color 0.25s ease;
-    cursor: pointer;
-}
-
-nav a:hover,
-.other ul:hover {
-    transform: scale(1.05);
-    background-color: rgb(60, 60, 60);
-    border-color: rgb(60, 60, 60);
-}
-
-.red {
-    background-image: url("Assets/Flashcard-BG-Red.png");
-}
-
+/* ===== ANIMATION ===== */
 .fade-up {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
+    transition: 1.2s ease;
 }
 
 .fade-up.show {
@@ -217,143 +156,37 @@ nav a:hover,
     transform: translateY(0);
 }
 
+/* =========================
+   MOBILE RESPONSIVE FIXES
+   ========================= */
 @media (max-width: 768px) {
 
     body {
         flex-direction: column;
-        gap: 10px;
-        padding: 10px;
+        align-items: center;
     }
 
     .card-container {
         display: none;
     }
 
-    .body-container {
+    .create-page {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .body-container,
+    .create-container {
         width: 100%;
     }
 
     nav ul {
         flex-direction: column;
-        padding: 0;
         width: 100%;
-    }
-
-    nav a {
-        display: block;
-        padding: 12px;
-        font-size: 16px;
+        text-align: center;
     }
 
     .flashcard {
-        min-width: 90%;
-        max-width: 90%;
-        font-size: 16px;
-    }
-
-    .flashcard p {
-        font-size: 18px;
-    }
-
-    label,
-    input,
-    button {
-        width: 90%;
-        margin: 10px auto;
-        display: block;
-    }
-
-    input {
-        aspect-ratio: auto;
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    button {
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    .create-container {
-        width: 100%;
-        margin-top: 20px;
-        padding-bottom: 40px;
-    }
-
-    .other {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .other ul {
-        width: 100%;
-    }
-
-    nav a:hover,
-    .other ul:hover,
-    .flashcard:hover {
-        transform: none;
-    }
-}
-
-@media (max-width: 768px) {
-
-    body {
-        flex-direction: column;
-        align-items: stretch;
-        overflow-x: hidden;
-    }
-
-    .body-container {
-        width: 100%;
         max-width: 100%;
-        padding: 0;
-    }
-
-    .create-container {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 20px;
-        padding: 16px;
-        padding-bottom: 32px;
-        box-sizing: border-box;
-    }
-
-    .flashcard-container {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .flashcard {
-        min-width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    #plus {
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    label,
-    input,
-    button {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    * {
-        max-width: 100vw;
-    }
-}
-.create-page {
-    display: flex;
-    gap: 20px;
-}
-
-@media (max-width: 768px) {
-    .create-page {
-        flex-direction: column;
     }
 }
