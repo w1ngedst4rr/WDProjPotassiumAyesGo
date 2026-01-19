@@ -347,3 +347,13 @@ nav a:hover,
         max-width: 100vw;
     }
 }
+.create-page {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .create-page {
+        flex-direction: column;
+    }
+}
