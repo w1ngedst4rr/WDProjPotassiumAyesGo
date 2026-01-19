@@ -18,4 +18,3 @@ window.addEventListener("load", () => {
         }, i * 150);
     });
 });
-
