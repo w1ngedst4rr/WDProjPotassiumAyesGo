@@ -276,3 +276,60 @@ html, body {
         width: 100%;
     }
 }
+
+/* =================== CREATE PAGE + NAV FIX =================== */
+
+/* Desktop (min-width 769px): side-by-side, no wrapping */
+@media (min-width: 769px) {
+    .create-page {
+        flex-wrap: nowrap;  /* force side-by-side */
+        justify-content: space-between; /* push them apart */
+        align-items: flex-start;
+    }
+}
+
+/* Mobile (max-width 768px): stack panels and scale nav */
+@media (max-width: 768px) {
+    .create-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body-container,
+    .create-container {
+        width: 95%;
+        max-width: 480px;
+    }
+
+    /* Make nav buttons fit and shrink automatically */
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;        /* allow buttons to go to next line if too narrow */
+        gap: 5px;
+        justify-content: center;
+    }
+
+    nav a {
+        flex: 1 1 45%;           /* flex-grow, flex-shrink, base width */
+        text-align: center;
+        padding: 8px 5px;        /* reduce padding to fit small screens */
+        font-size: 14px;         /* scale text for mobile */
+        box-sizing: border-box;
+    }
+
+    /* Flashcards and create inputs/buttons scale */
+    .flashcard,
+    #plus {
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    label,
+    input,
+    button {
+        width: 100% !important;
+        margin: 0 0 10px 0 !important;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+}
