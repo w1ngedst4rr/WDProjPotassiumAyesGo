@@ -212,14 +212,10 @@ nav a:hover,
     transform: translateY(0);
 }
 
-/* ================== MOBILE + RESPONSIVE CREATE PAGE ================== */
-
-/* Apply globally: prevent overflow */
 html, body {
     overflow-x: hidden;
 }
 
-/* Wrap create page for side-by-side on desktop */
 .create-page {
     display: flex;
     gap: 20px;
@@ -230,7 +226,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Desktop: side-by-side */
 @media (min-width: 769px) {
     .body-container {
         width: 70vw;
@@ -241,7 +236,6 @@ html, body {
     }
 }
 
-/* Mobile: stack vertically + scale elements */
 @media (max-width: 768px) {
     .create-page {
         flex-direction: column;
@@ -251,7 +245,7 @@ html, body {
     .body-container,
     .create-container {
         width: 95%;
-        max-width: 480px;  /* makes inputs readable */
+        max-width: 480px;
     }
 
     .flashcard {
@@ -269,7 +263,7 @@ html, body {
     button {
         width: 100% !important;
         margin: 0 0 10px 0 !important;
-        font-size: 16px;       /* scale text down slightly for small phones */
+        font-size: 16px;
     }
 
     .other ul {
@@ -277,18 +271,14 @@ html, body {
     }
 }
 
-/* =================== CREATE PAGE + NAV FIX =================== */
-
-/* Desktop (min-width 769px): side-by-side, no wrapping */
 @media (min-width: 769px) {
     .create-page {
-        flex-wrap: nowrap;  /* force side-by-side */
-        justify-content: space-between; /* push them apart */
+        flex-wrap: nowrap;
+        justify-content: space-between;
         align-items: flex-start;
     }
 }
 
-/* Mobile (max-width 768px): stack panels and scale nav */
 @media (max-width: 768px) {
     .create-page {
         flex-direction: column;
@@ -301,23 +291,21 @@ html, body {
         max-width: 480px;
     }
 
-    /* Make nav buttons fit and shrink automatically */
     nav ul {
         display: flex;
-        flex-wrap: wrap;        /* allow buttons to go to next line if too narrow */
+        flex-wrap: wrap;
         gap: 5px;
         justify-content: center;
     }
 
     nav a {
-        flex: 1 1 45%;           /* flex-grow, flex-shrink, base width */
+        flex: 1 1 45%;
         text-align: center;
-        padding: 8px 5px;        /* reduce padding to fit small screens */
-        font-size: 14px;         /* scale text for mobile */
+        padding: 8px 5px;
+        font-size: 14px;
         box-sizing: border-box;
     }
 
-    /* Flashcards and create inputs/buttons scale */
     .flashcard,
     #plus {
         min-width: 100% !important;
